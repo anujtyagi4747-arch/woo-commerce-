@@ -365,3 +365,750 @@ header{
 
 </body>
 </html>
+<!-- =========================
+     MYRA'S KITCHEN - PART 2
+========================= -->
+
+<style>
+
+/* PRODUCT SECTION */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.product-card{
+    background:#fff;
+    border:1px solid #eee9df;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.25s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(40,35,25,.08);
+}
+
+.product-img{
+    height:250px;
+    background:#f5efe4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    font-size:75px;
+}
+
+.product-tag{
+    position:absolute;
+    top:14px;
+    left:14px;
+    background:#25291f;
+    color:#fff;
+    padding:7px 11px;
+    border-radius:5px;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.7px;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-category{
+    font-size:10px;
+    color:#97754a;
+    font-weight:800;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    margin-bottom:7px;
+}
+
+.product-name{
+    font-size:19px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.product-desc{
+    font-size:13px;
+    line-height:1.55;
+    color:#77766e;
+    min-height:41px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:17px;
+}
+
+.product-price{
+    font-size:18px;
+    font-weight:800;
+}
+
+.product-weight{
+    display:block;
+    color:#89877f;
+    font-size:11px;
+    font-weight:500;
+    margin-top:3px;
+}
+
+.add-cart{
+    border:0;
+    background:#25291f;
+    color:#fff;
+    padding:11px 15px;
+    border-radius:7px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.add-cart:hover{
+    background:#11140f;
+}
+
+
+/* CATEGORY STRIP */
+
+.category-strip{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:55px;
+}
+
+.category-box{
+    min-height:145px;
+    padding:25px;
+    border-radius:17px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    transition:.2s;
+}
+
+.category-box:hover{
+    transform:translateY(-3px);
+}
+
+.category-box:nth-child(1){
+    background:#f3ead9;
+}
+
+.category-box:nth-child(2){
+    background:#f0e8df;
+}
+
+.category-box:nth-child(3){
+    background:#e8eee3;
+}
+
+.category-number{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#877354;
+    margin-bottom:9px;
+}
+
+.category-box h3{
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+.category-box p{
+    font-size:12px;
+    color:#77766e;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+    .category-strip{
+        grid-template-columns:1fr;
+        margin-bottom:40px;
+    }
+
+    .category-box{
+        min-height:120px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .product-img{
+        height:180px;
+        font-size:58px;
+    }
+
+    .product-info{
+        padding:14px;
+    }
+
+    .product-name{
+        font-size:16px;
+    }
+
+    .product-desc{
+        font-size:11px;
+    }
+
+    .product-bottom{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .add-cart{
+        width:100%;
+    }
+
+}
+
+@media(max-width:430px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-img{
+        height:230px;
+    }
+
+    .product-bottom{
+        flex-direction:row;
+        align-items:center;
+    }
+
+    .add-cart{
+        width:auto;
+    }
+
+}
+
+</style>
+
+
+<section class="section">
+
+<div class="container">
+
+
+<!-- CATEGORIES -->
+
+<div class="category-strip">
+
+<div class="category-box">
+
+<div class="category-number">01 / SUPERFOODS</div>
+
+<h3>Seeds & Energy</h3>
+
+<p>
+Flaxseed, seeds, sattu and natural energy.
+</p>
+
+</div>
+
+
+<div class="category-box">
+
+<div class="category-number">02 / PREMIUM</div>
+
+<h3>Dry Fruit Laddus</h3>
+
+<p>
+Rich dry fruits with no added sugar options.
+</p>
+
+</div>
+
+
+<div class="category-box">
+
+<div class="category-number">03 / MODERN</div>
+
+<h3>Protein Bars</h3>
+
+<p>
+Modern snacks for active everyday living.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<div class="section-head">
+
+<div>
+
+<h2>Our favourites</h2>
+
+<p>
+Made with carefully selected ingredients.
+</p>
+
+</div>
+
+<a href="#shop" class="view-all">
+SHOP ALL
+</a>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+BESTSELLER
+</span>
+
+🥜
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Superfood & Seeds
+</div>
+
+<div class="product-name">
+Omega-3 Flaxseed Laddu
+</div>
+
+<div class="product-desc">
+Roasted flaxseed, pure ghee, jaggery, almonds & cardamom.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹399
+<span class="product-weight">250g</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Omega-3 Flaxseed Laddu',399)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+POPULAR
+</span>
+
+🌱
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Superfood & Seeds
+</div>
+
+<div class="product-name">
+7-Seed Energy Laddu
+</div>
+
+<div class="product-desc">
+Seven wholesome seeds combined with dates for natural energy.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹449
+<span class="product-weight">250g</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('7-Seed Energy Laddu',449)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+HIGH PROTEIN
+</span>
+
+💪
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Protein
+</div>
+
+<div class="product-name">
+Flax & Sattu Protein Laddu
+</div>
+
+<div class="product-desc">
+Roasted chana flour, flaxseed, almonds and natural sweetness.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹429
+<span class="product-weight">250g</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Flax & Sattu Protein Laddu',429)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+NO ADDED SUGAR
+</span>
+
+🥜
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Premium Dry Fruit
+</div>
+
+<div class="product-name">
+Royal Dry Fruit Laddu
+</div>
+
+<div class="product-desc">
+Almonds, cashews, pistachios, walnuts and dates only.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹549
+<span class="product-weight">250g</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Royal Dry Fruit Laddu',549)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+PREMIUM
+</span>
+
+🍇
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Premium Dry Fruit
+</div>
+
+<div class="product-name">
+Anjeer & Walnut Laddu
+</div>
+
+<div class="product-desc">
+Figs, walnuts, cranberries and poppy seeds.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹499
+<span class="product-weight">250g</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Anjeer & Walnut Laddu',499)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+WINTER SPECIAL
+</span>
+
+🌰
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Traditional
+</div>
+
+<div class="product-name">
+Gond Laddu
+</div>
+
+<div class="product-desc">
+Gond, dry fruits, dry ginger and nutmeg.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹479
+<span class="product-weight">250g</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Gond Laddu',479)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 7 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+PROTEIN
+</span>
+
+🍫
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Modern Protein Bar
+</div>
+
+<div class="product-name">
+Fudgy Protein Bar
+</div>
+
+<div class="product-desc">
+Almonds, cashews, dates and whey/pea protein.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹299
+<span class="product-weight">Pack of 6</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Fudgy Protein Bar',299)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 8 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+NEW
+</span>
+
+🍒
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Modern Protein Bar
+</div>
+
+<div class="product-name">
+Cranberry Flax Protein Bar
+</div>
+
+<div class="product-desc">
+Dry fruits, protein crispies, flaxseed and date binder.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹319
+<span class="product-weight">Pack of 6</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Cranberry Flax Protein Bar',319)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 9 -->
+
+<div class="product-card">
+
+<div class="product-img">
+
+<span class="product-tag">
+CHOCOLATE
+</span>
+
+🍫
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Modern Protein Bar
+</div>
+
+<div class="product-name">
+Dark Chocolate Peanut Bar
+</div>
+
+<div class="product-desc">
+Peanuts, cocoa, sesame and flaxseeds.
+</div>
+
+<div class="product-bottom">
+
+<div class="product-price">
+₹299
+<span class="product-weight">Pack of 6</span>
+</div>
+
+<button class="add-cart" onclick="addToCart('Dark Chocolate Peanut Bar',299)">
+ADD TO CART
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+let myraCart = [];
+
+function addToCart(name,price){
+
+    myraCart.push({
+        name:name,
+        price:price
+    });
+
+    alert(name + " added to cart 🛒");
+
+}
+
+    </script>
